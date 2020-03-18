@@ -19,38 +19,38 @@
 		app:layout_constraintTop_toTopOf="parent" />
 
 	<RadioButton
-		android:id="@+id/radioButton2"
+		android:id="@+id/answer1RadioButton"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginTop="24dp"
-		android:text="RadioButton"
+		android:text="Réponce A"
 		app:layout_constraintStart_toStartOf="@+id/questionTextView"
 		app:layout_constraintTop_toBottomOf="@+id/questionTextView" />
 
 	<RadioButton
-		android:id="@+id/radioButton3"
+		android:id="@+id/answer2RadioButton"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginTop="24dp"
-		android:text="RadioButton"
+		android:text="Réponce B"
 		app:layout_constraintStart_toStartOf="@+id/questionTextView"
-		app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
+		app:layout_constraintTop_toBottomOf="@+id/answer1RadioButton" />
 
 	<RadioButton
-		android:id="@+id/radioButton4"
+		android:id="@+id/answer3RadioButton"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginTop="24dp"
-		android:text="RadioButton"
+		android:text="Un hypocampe"
 		app:layout_constraintStart_toStartOf="@+id/questionTextView"
-		app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
+		app:layout_constraintTop_toBottomOf="@+id/answer2RadioButton" />
 
 	<TextView
 		android:id="@+id/questionTextView"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginTop="32dp"
-		android:text="Qui était Alan Turing?"
+		android:text="Question"
 		android:textSize="24sp"
 		app:layout_constraintEnd_toEndOf="@+id/titreQuizzView"
 		app:layout_constraintStart_toStartOf="@+id/titreQuizzView"
@@ -64,7 +64,7 @@
 		android:text="Validé"
 		app:layout_constraintEnd_toEndOf="@+id/questionTextView"
 		app:layout_constraintStart_toStartOf="@+id/questionTextView"
-		app:layout_constraintTop_toBottomOf="@+id/radioButton4" />
+		app:layout_constraintTop_toBottomOf="@+id/answer3RadioButton" />
 
 	<ImageView
 		android:id="@+id/imageView"
@@ -75,5 +75,16 @@
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@+id/validButton"
 		app:srcCompat="@drawable/alan_turing" />
+
+	<TextView
+		android:id="@+id/DifficultytextView"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="8dp"
+		android:layout_marginRight="8dp"
+		android:layout_marginBottom="8dp"
+		android:text="Niveau"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
