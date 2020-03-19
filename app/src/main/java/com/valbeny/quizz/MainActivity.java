@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,12 +17,25 @@ public class MainActivity extends AppCompatActivity {
 
 		Log.i("MainActivity","Quizz lancé");
 
-		Button goQuizzButton = findViewById(R.id.goQuizzButton);
-		goQuizzButton.setOnClickListener(new View.OnClickListener() {
+		Button goQuizzButtonNormal = findViewById(R.id.goQuizzButtonNormal);
+		goQuizzButtonNormal.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(MainActivity.this, QuizzActivity.class); //Changer de view
 				intent.putExtra("Difficulty","normal");//send information
+				startActivity(intent);//use intent
+
+			//	Intent  data = new Intent(MainActivity.this, QuizzActivity.class);
+			//	intent.getDataString('c', Currency);
+			}
+		});
+
+		Button goQuizzButton = findViewById(R.id.goQuizzButtonEasy);
+		goQuizzButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(MainActivity.this, QuizzActivity.class); //Changer de view
+				intent.putExtra("Difficulty","easy");//send information
 				startActivity(intent);//use intent
 			}
 		});

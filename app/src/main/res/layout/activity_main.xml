@@ -7,24 +7,26 @@
 	tools:context=".MainActivity">
 
 	<Button
-		android:id="@+id/goQuizzButton"
+		android:id="@+id/goQuizzButtonNormal"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text="Démarer le Quizz en Normal"
-		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintBottom_toTopOf="@+id/listQuestionButton"
 		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.5"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toTopOf="parent" />
+		app:layout_constraintTop_toBottomOf="@+id/goQuizzButtonEasy" />
 
 	<Button
 		android:id="@+id/aboutButton"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text="A propos"
-		app:layout_constraintEnd_toEndOf="@+id/goQuizzButton"
-		app:layout_constraintHorizontal_bias="0.492"
-		app:layout_constraintStart_toStartOf="@+id/goQuizzButton"
-		tools:layout_editor_absoluteY="519dp" />
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="@+id/goQuizzButtonNormal"
+		app:layout_constraintHorizontal_bias="0.5"
+		app:layout_constraintStart_toStartOf="@+id/goQuizzButtonNormal"
+		app:layout_constraintTop_toBottomOf="@+id/listQuestionButton" />
 
 	<Button
 		android:id="@+id/listQuestionButton"
@@ -32,8 +34,20 @@
 		android:layout_height="wrap_content"
 		android:text="Afficher la liste des questions"
 		app:layout_constraintBottom_toTopOf="@+id/aboutButton"
-		app:layout_constraintEnd_toEndOf="@+id/goQuizzButton"
-		app:layout_constraintStart_toStartOf="@+id/goQuizzButton"
-		app:layout_constraintTop_toBottomOf="@+id/goQuizzButton" />
+		app:layout_constraintEnd_toEndOf="@+id/goQuizzButtonNormal"
+		app:layout_constraintHorizontal_bias="0.5"
+		app:layout_constraintStart_toStartOf="@+id/goQuizzButtonNormal"
+		app:layout_constraintTop_toBottomOf="@+id/goQuizzButtonNormal" />
+
+	<Button
+		android:id="@+id/goQuizzButtonEasy"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Démarer le quizz en eazy"
+		app:layout_constraintBottom_toTopOf="@+id/goQuizzButtonNormal"
+		app:layout_constraintEnd_toEndOf="@+id/goQuizzButtonNormal"
+		app:layout_constraintHorizontal_bias="0.5"
+		app:layout_constraintStart_toStartOf="@+id/goQuizzButtonNormal"
+		app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

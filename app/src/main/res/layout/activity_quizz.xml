@@ -35,9 +35,8 @@
 		android:layout_height="wrap_content"
 		android:layout_marginTop="32dp"
 		android:text="Validé"
-		app:layout_constraintEnd_toEndOf="@+id/questionTextView"
-		app:layout_constraintHorizontal_bias="1.0"
-		app:layout_constraintStart_toStartOf="@+id/questionTextView"
+		app:layout_constraintEnd_toEndOf="@+id/titreQuizzView"
+		app:layout_constraintStart_toStartOf="@+id/titreQuizzView"
 		app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
 	<TextView
