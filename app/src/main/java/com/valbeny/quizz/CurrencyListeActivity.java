@@ -24,7 +24,7 @@ public class CurrencyListeActivity extends AppCompatActivity {
 
 		for (int i = 0; i<50; i++){
 			currencies.add(new Currency(R.drawable.alan_turing, "Qui était Alan Turing ?","Un plombier","Une commode","Un Mathématicien"));
-			currencies.add(new Currency(R.drawable.bill_gates, "A quel âge Bill Gate a fondé Microsoft ?","18 ans","20 ans","37 ans"));
+			currencies.add(new Currency(R.drawable.bill_gates, " A quel âge Bill Gate a fondé Microsoft?","18 ans","20 ans","37 ans"));
 			currencies.add(new Currency(R.drawable.ascii, "Combien y a t-il de caractère dans la table ascii ?","36","127","86"));
 		}
 

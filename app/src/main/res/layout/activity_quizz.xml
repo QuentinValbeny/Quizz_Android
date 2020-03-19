@@ -73,7 +73,7 @@
 
 		<RadioButton
 			android:id="@+id/answer1RadioButton"
-			android:layout_width="match_parent"
+			android:layout_width="170dp"
 			android:layout_height="wrap_content"
 			android:text="Réponce A" />
 
@@ -85,9 +85,9 @@
 
 		<RadioButton
 			android:id="@+id/answer3RadioButton"
-			android:layout_width="wrap_content"
+			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:text="Un hypocampe" />
+			android:text="" />
 
 	</RadioGroup>
 
