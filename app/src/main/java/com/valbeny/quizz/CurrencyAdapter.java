@@ -1,5 +1,8 @@
 package com.valbeny.quizz;
 
+import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
-public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.ViewHolder> {
+public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.ViewHolder> implements View.OnClickListener {
 
 	private List<Currency> currencies;
 
@@ -33,11 +36,29 @@ public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.ViewHo
 		holder.answer1.setText(currency.answer1);
 		holder.answer2.setText(currency.answer2);
 		holder.answer3.setText(currency.answer3);
+
+
+		holder.itemView.setTag(currency);
+		holder.itemView.setOnClickListener(this);
 	}
 
 	@Override
 	public int getItemCount() {
 		return currencies.size();
+	}
+
+	@Override
+	public void onClick(View v) {
+		Log.i("Currency", "class");
+		switch (v.getId()){
+			case R.id.rootItem:
+				Context context = v.getContext();
+				Currency c = (Currency) v.getTag();
+				Intent intent = new Intent(context, QuizzActivity.class);
+				intent.putExtra("currency", c);
+				context.startActivity(intent);
+				break;
+		}
 	}
 
 	class ViewHolder extends RecyclerView.ViewHolder {
