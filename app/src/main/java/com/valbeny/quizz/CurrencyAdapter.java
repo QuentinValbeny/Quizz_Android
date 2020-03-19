@@ -11,9 +11,9 @@ import java.util.List;
 
 public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.ViewHolder> {
 
-	private List<Question> currencies;
+	private List<Currency> currencies;
 
-	public CurrencyAdapter(List<Question> currencies){
+	public CurrencyAdapter(List<Currency> currencies){
 		this.currencies = currencies;
 	}
 
@@ -27,9 +27,12 @@ public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.ViewHo
 
 	@Override
 	public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-		Question currency = currencies.get(position);
+		Currency currency = currencies.get(position);
 		holder.doc.setImageResource(currency.docId);
 		holder.question.setText(currency.question);
+		holder.answer1.setText(currency.answer1);
+		holder.answer2.setText(currency.answer2);
+		holder.answer3.setText(currency.answer3);
 	}
 
 	@Override

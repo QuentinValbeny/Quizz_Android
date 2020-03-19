@@ -23,6 +23,16 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(MainActivity.this, QuizzActivity.class); //Changer de view
+				intent.putExtra("Difficulty","normal");//send information
+				startActivity(intent);//use intent
+			}
+		});
+
+		Button listQuestionButton = findViewById(R.id.listQuestionButton);
+		listQuestionButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(MainActivity.this, CurrencyListeActivity.class); //Changer de view
 				startActivity(intent);//use intent
 			}
 		});
