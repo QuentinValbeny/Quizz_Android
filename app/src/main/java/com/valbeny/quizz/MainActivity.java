@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
 	@Override
@@ -15,18 +17,23 @@ public class MainActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		Log.i("MainActivity","Quizz lancé");
+		Log.i("MainActivity", "Quizz lancé");
 
 		Button goQuizzButtonNormal = findViewById(R.id.goQuizzButtonNormal);
 		goQuizzButtonNormal.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				ArrayList<String> listAnswer = new ArrayList<String>();
+				listAnswer.add("Un plombier");
+				listAnswer.add("Une commode");
+				listAnswer.add("Un Mathématicien");
+				QuizzTest test = new QuizzTest("Qui était Alan Turing", "Un Mathématicien", listAnswer);
+
 				Intent intent = new Intent(MainActivity.this, QuizzActivity.class); //Changer de view
-				intent.putExtra("Difficulty","normal");//send information
+				intent.putExtra("Difficulty", "normal");//send information
+				intent.putExtra("Test", test);
 				startActivity(intent);//use intent
 
-			//	Intent  data = new Intent(MainActivity.this, QuizzActivity.class);
-			//	intent.getDataString('c', Currency);
 			}
 		});
 
@@ -34,8 +41,15 @@ public class MainActivity extends AppCompatActivity {
 		goQuizzButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				ArrayList<String> listAnswer = new ArrayList<String>();
+				listAnswer.add("Un capitaine de galion");
+				listAnswer.add("Une poule");
+				listAnswer.add("Un Mathématicien");
+				QuizzTest test = new QuizzTest("Qui était Alan Turing", "Un Mathématicien", listAnswer);
+
 				Intent intent = new Intent(MainActivity.this, QuizzActivity.class); //Changer de view
-				intent.putExtra("Difficulty","easy");//send information
+				intent.putExtra("Difficulty", "easy");//send information
+				intent.putExtra("Test", test);
 				startActivity(intent);//use intent
 			}
 		});
