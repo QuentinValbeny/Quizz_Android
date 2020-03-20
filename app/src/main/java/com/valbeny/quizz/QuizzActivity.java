@@ -66,7 +66,7 @@ public class QuizzActivity extends AppCompatActivity {
 				if (answer.equals(test.goodAnswer)) {
 					Toast.makeText(QuizzActivity.this, "Bonne réponse", Toast.LENGTH_SHORT).show();
 				} else {
-					Toast.makeText(QuizzActivity.this, "Mauvaise réponse", Toast.LENGTH_SHORT).show();
+					Toast.makeText(QuizzActivity.this, "Mauvaise réponse: "+test.goodAnswer, Toast.LENGTH_SHORT).show();
 				}
 			}
 		});
