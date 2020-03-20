@@ -57,5 +57,14 @@ public class MainActivity extends AppCompatActivity {
 				startActivity(intent);//use intent
 			}
 		});
+
+		Button tricheButton = findViewById(R.id.tricheButton);
+		tricheButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(MainActivity.this, QuizzTriche.class); //Changer de view
+				startActivity(intent);//use intent
+			}
+		});
 	}
 }

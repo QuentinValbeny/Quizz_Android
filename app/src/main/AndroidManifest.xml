@@ -9,7 +9,10 @@
 		android:roundIcon="@mipmap/ic_launcher_round"
 		android:supportsRtl="true"
 		android:theme="@style/AppTheme">
-		<activity android:name=".CurrencyListeActivity"></activity>
+		<activity android:name=".QuizzTriche2"></activity>
+		<activity android:name=".falseActivity" />
+		<activity android:name=".QuizzTriche" />
+		<activity android:name=".CurrencyListeActivity" />
 		<activity android:name=".aboutActivity" />
 		<activity android:name=".QuizzActivity" />
 		<activity android:name=".MainActivity">
