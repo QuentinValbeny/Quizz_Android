@@ -19,15 +19,16 @@ public class MainActivity extends AppCompatActivity {
 
 		Log.i("MainActivity", "Quizz lancé");
 
-		Button goQuizzButtonNormal = findViewById(R.id.goQuizzButtonNormal);
+		Button goQuizzButtonNormal = findViewById(R.id.goQuizzButtonNormal);//Start Quizz button
 		goQuizzButtonNormal.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				ArrayList<String> listAnswer = new ArrayList<String>();
+				ArrayList<String> listAnswer = new ArrayList<String>(); //Set the first question in normal difficulty
 				listAnswer.add("Un plombier");
 				listAnswer.add("Une commode");
 				listAnswer.add("Un Mathématicien");
-				QuizzTest test = new QuizzTest("Qui était Alan Turing", "Un Mathématicien", listAnswer);
+				QuizzTest test = new QuizzTest("Qui était Alan Turing", "Un Mathématicien", listAnswer);//instantiate test
+				//QuizzTest test = new QuizzTest("Qui était Alan Turing", "Un Mathématicien", listAnswer, idDoc);
 
 				Intent intent = new Intent(MainActivity.this, QuizzActivity.class); //Changer de view
 				intent.putExtra("Difficulty", "normal");//send information
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 		goQuizzButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				ArrayList<String> listAnswer = new ArrayList<String>();
+				ArrayList<String> listAnswer = new ArrayList<String>();//Set the first question in easy difficulty
 				listAnswer.add("Un capitaine de galion");
 				listAnswer.add("Une poule");
 				listAnswer.add("Un Mathématicien");

@@ -6,21 +6,25 @@ import android.os.Parcelable;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class QuizzTest implements Parcelable {// Video parcelable
+public class QuizzTest implements Parcelable {
 	public String question;
 	public String goodAnswer;
 	public ArrayList<String> answers;
+	//public int doc;
 
 	public QuizzTest(String question, String goodAnswer, ArrayList<String> answers) {
+	//public QuizzTest(String question, String goodAnswer, ArrayList<String> answers, int doc) {
 		this.question = question;
 		this.goodAnswer = goodAnswer;
 		this.answers = answers;
+	//	this.doc = doc;
 	}
 
 	protected QuizzTest(Parcel in) {
 		question = in.readString();
 		goodAnswer = in.readString();
 		answers = in.createStringArrayList();
+	//	doc = in.readInt();
 	}
 
 	@Override
@@ -28,6 +32,7 @@ public class QuizzTest implements Parcelable {// Video parcelable
 		dest.writeString(question);
 		dest.writeString(goodAnswer);
 		dest.writeStringList(answers);
+	//	dest.writeInt(doc);
 	}
 
 	@Override
